@@ -39,7 +39,7 @@ def run_backtest_parallel(
 
     # Format sbatch_script
     sbatch_script = f"""#!/bin/bash
-#SBATCH --job-name=momentum_backtest
+#SBATCH --job-name=bayesian_quality_backtest
 #SBATCH --output=logs/{signal_name}/{gamma}/backtest_%A_%a.out
 #SBATCH --error=logs/{signal_name}/{gamma}/backtest_%A_%a.err
 #SBATCH --array=0-{num_years - 1}%31
